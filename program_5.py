@@ -1,5 +1,12 @@
-# Program #5: Course Info
-# Write a program that has the user input a bunch of course ID and course name pairs.  
-# For example a course ID could be "COS 2005" and the course name could be "Python Programming."   
-# Then ask the user for a subject (like "COS"). 
-# Finally, the program will display the ID and name of all the courses having that subject.
+classes = {}
+courses = int(input('How many courses would you like to add'))
+for i in range(courses):
+    key = input('What is the Course ID? ').upper()
+    value = input('What is the name of the class? ')
+
+    classes[key] = value
+pick = input('what subject would you like to see? ').upper()
+for key, value in classes.items():
+        if key.startswith(pick):
+            print(key,value)
+
